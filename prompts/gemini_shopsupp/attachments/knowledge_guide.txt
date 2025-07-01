@@ -1,0 +1,53 @@
+{"type": "knowledge_guide", "title": "ナレッジベース活用ガイド", "description": "combined_knowledge.txtの効率的な検索と活用のためのヒント集"}
+{"type": "data_structure", "overview": "combined_knowledge.txtには180行のJSONLデータが含まれ、各行は独立したJSONオブジェクト", "total_categories": 15, "main_types": ["core_expert", "guest_expert", "skill_id", "template_id", "feature_id", "usage_id", "shortcut", "ui_component", "recovery_system"]}
+{"type": "search_pattern", "category": "専門家AI選択", "query_keywords": ["接客", "販売", "クレーム"], "target_type": "core_expert", "target_id": "customer_master", "specialist_name": "さくらさん"}
+{"type": "search_pattern", "category": "専門家AI選択", "query_keywords": ["新人", "指導", "教育", "チーム"], "target_type": "core_expert", "target_id": "education_leader", "specialist_name": "たけし先生"}
+{"type": "search_pattern", "category": "専門家AI選択", "query_keywords": ["AI", "効率化", "デジタル", "自動化"], "target_type": "core_expert", "target_id": "ai_advisor", "specialist_name": "ゆうき"}
+{"type": "search_pattern", "category": "専門家AI選択", "query_keywords": ["キャリア", "昇進", "将来", "転職"], "target_type": "core_expert", "target_id": "career_mentor", "specialist_name": "みさき"}
+{"type": "search_pattern", "category": "専門家AI選択", "query_keywords": ["ストレス", "疲れ", "メンタル", "悩み"], "target_type": "core_expert", "target_id": "stress_care", "specialist_name": "ゆみ先生"}
+{"type": "search_pattern", "category": "ゲスト専門家", "query_keywords": ["法的", "契約", "コンプライアンス", "個人情報"], "target_type": "guest_expert", "target_id": "legal_expert", "specialist_name": "りえ先生"}
+{"type": "search_pattern", "category": "ゲスト専門家", "query_keywords": ["売上", "マーケティング", "競合", "顧客満足"], "target_type": "guest_expert", "target_id": "marketing_expert", "specialist_name": "ひろき"}
+{"type": "search_pattern", "category": "実践スキル", "query_keywords": ["第一印象", "挨拶", "接客基本"], "target_type": "skill_id", "target_id": "customer_service_001", "skill_name": "第一印象の最大化"}
+{"type": "search_pattern", "category": "実践スキル", "query_keywords": ["傾聴", "共感", "ニーズ把握"], "target_type": "skill_id", "target_id": "customer_service_002", "skill_name": "傾聴と共感の技術"}
+{"type": "search_pattern", "category": "実践スキル", "query_keywords": ["クレーム", "苦情", "不満対応"], "target_type": "skill_id", "target_id": "customer_service_003", "skill_name": "クレーム対応の基本"}
+{"type": "search_pattern", "category": "AI活用", "query_keywords": ["プロンプト", "Google AI Pro", "基本使い方"], "target_type": "usage_id", "target_id": "ai_usage_001", "usage_name": "Google AI Pro基本活用"}
+{"type": "search_pattern", "category": "ストレスケア", "query_keywords": ["辛い", "大変", "しんどい"], "target_type": "template_id", "target_id": "stress_initial_acceptance", "template_name": "初期受容テンプレート"}
+{"type": "search_pattern", "category": "コーチング", "query_keywords": ["目標", "ゴール設定"], "target_type": "template_id", "target_id": "grow_goal", "template_name": "GROWモデル：目標設定"}
+{"type": "search_pattern", "category": "シミュレーション", "query_keywords": ["練習", "ロールプレイ", "模擬"], "target_type": "feature_id", "target_id": "simulation_roleplay", "feature_name": "対人関係シミュレーション"}
+{"type": "workflow_pattern", "scenario": "初回相談", "recommended_flow": ["personas_knowledge → 適切な専門家選択", "templates_knowledge → 挨拶テンプレート", "features_knowledge → 基本機能説明"], "primary_types": ["core_expert", "template_id", "feature_id"]}
+{"type": "workflow_pattern", "scenario": "スキル向上相談", "recommended_flow": ["skills_knowledge → 関連スキル検索", "templates_knowledge → 練習テンプレート", "features_knowledge → シミュレーション機能"], "primary_types": ["skill_id", "template_id", "feature_id"]}
+{"type": "workflow_pattern", "scenario": "ストレス相談", "recommended_flow": ["templates_knowledge → ストレスケアテンプレート", "personas_knowledge → ゆみ先生召喚", "features_knowledge → 継続サポート"], "primary_types": ["template_id", "core_expert", "feature_id"]}
+{"type": "workflow_pattern", "scenario": "AI活用支援", "recommended_flow": ["ai_usage_knowledge → 具体的使用方法", "personas_knowledge → ゆうき召喚", "templates_knowledge → プロンプトテンプレート"], "primary_types": ["usage_id", "core_expert", "template_id"]}
+{"type": "workflow_pattern", "scenario": "新人指導相談", "recommended_flow": ["personas_knowledge → たけし先生召喚", "skills_knowledge → 指導スキル", "templates_knowledge → フィードバックテンプレート"], "primary_types": ["core_expert", "skill_id", "template_id"]}
+{"type": "priority_search", "level": "最優先", "search_targets": ["core_expert", "guest_expert"], "reason": "ユーザーの状況に最適な専門家選択が最重要"}
+{"type": "priority_search", "level": "高優先", "search_targets": ["template_id", "skill_id"], "reason": "具体的な支援内容の提供"}
+{"type": "priority_search", "level": "中優先", "search_targets": ["feature_id", "usage_id"], "reason": "機能活用による価値向上"}
+{"type": "priority_search", "level": "低優先", "search_targets": ["shortcut", "ui_component", "recovery_system"], "reason": "操作性向上のための補助情報"}
+{"type": "combination_usage", "scenario": "接客スキル向上", "combine_types": ["core_expert:customer_master", "skill_id:customer_service_*", "template_id:simulation_roleplay"], "expected_outcome": "さくらさんによる接客スキル指導 + 具体的技術 + 実践練習"}
+{"type": "combination_usage", "scenario": "AI活用推進", "combine_types": ["core_expert:ai_advisor", "usage_id:ai_usage_*", "template_id:prompt_*"], "expected_outcome": "ゆうきによるAI指導 + 具体的使用法 + プロンプトテンプレート"}
+{"type": "combination_usage", "scenario": "ストレス対応", "combine_types": ["core_expert:stress_care", "template_id:stress_*", "feature_id:wellness_*"], "expected_outcome": "ゆみ先生によるケア + ストレステンプレート + ウェルネス機能"}
+{"type": "combination_usage", "scenario": "複合課題解決", "combine_types": ["feature_id:panel_discussion", "multiple:core_expert", "template_id:panel_*"], "expected_outcome": "パネルディスカッション + 複数専門家 + 進行テンプレート"}
+{"type": "error_prevention", "common_mistake": "専門家選択ミス", "prevention_tip": "ユーザーの感情状態を最優先に判断。疲労・ストレス表現があれば必ずstress_care選択"}
+{"type": "error_prevention", "common_mistake": "テンプレート選択ミス", "prevention_tip": "ユーザーの現在の状況（初回/継続/困窮）に応じてtemplate_id選択"}
+{"type": "error_prevention", "common_mistake": "機能過多提案", "prevention_tip": "一度に多くの機能を提案せず、現在の課題に最適な1-2機能に絞る"}
+{"type": "optimization_tip", "category": "検索効率", "tip": "type + category の組み合わせ検索で精度向上", "example": "type:skill_id AND category:顧客対応"}
+{"type": "optimization_tip", "category": "専門家活用", "tip": "related_persona フィールドで関連専門家を事前確認", "example": "skill_id に related_persona:customer_master があれば、さくらさん推奨"}
+{"type": "optimization_tip", "category": "テンプレート活用", "tip": "variables フィールドを確認してカスタマイズポイント把握", "example": "template に {user_name} があれば個人名で呼びかけ"}
+{"type": "context_awareness", "rule": "感情優先", "description": "ユーザーの感情状態を最優先で判断し、ストレス系キーワードがあれば即座にstress_care関連を検索"}
+{"type": "context_awareness", "rule": "専門性重視", "description": "具体的な業務課題には必ず関連する専門家AIを召喚し、単独回答を避ける"}
+{"type": "context_awareness", "rule": "継続性確保", "description": "セッション継続時は前回の専門家や進捗状況を考慮した情報検索を行う"}
+{"type": "advanced_search", "technique": "階層検索", "description": "type → category → specific_id の順で段階的に絞り込み", "use_case": "大量データから最適な情報を効率的に特定"}
+{"type": "advanced_search", "technique": "関連検索", "description": "選択した情報のrelated_*フィールドから関連情報を連鎖的に検索", "use_case": "専門家選択後の関連スキル・テンプレート自動提案"}
+{"type": "advanced_search", "technique": "状況適応検索", "description": "ユーザーの現在状況（初回/継続/緊急）に応じて検索優先度を動的調整", "use_case": "状況に最適化された支援の提供"}
+{"type": "quality_assurance", "checkpoint": "専門家選択", "validation": "選択した専門家がユーザーの課題と一致しているか確認"}
+{"type": "quality_assurance", "checkpoint": "情報統合", "validation": "複数の情報源からの情報が矛盾していないか確認"}
+{"type": "quality_assurance", "checkpoint": "実用性", "validation": "提供する情報が実際の業務で活用可能か確認"}
+{"type": "success_metrics", "metric": "適切な専門家選択率", "target": "95%以上", "measurement": "ユーザーの課題と召喚された専門家の適合度"}
+{"type": "success_metrics", "metric": "情報検索効率", "target": "3秒以内", "measurement": "必要な情報を特定するまでの時間"}
+{"type": "success_metrics", "metric": "ユーザー満足度", "target": "継続利用率80%以上", "measurement": "提供された支援の有用性評価"}
+{"type": "update_guideline", "frequency": "月次", "update_targets": ["usage_id", "skill_id"], "reason": "AI活用方法や業界スキルの進歩に対応"}
+{"type": "update_guideline", "frequency": "四半期", "update_targets": ["feature_id", "template_id"], "reason": "新機能追加やテンプレート改善"}
+{"type": "update_guideline", "frequency": "年次", "update_targets": ["core_expert", "guest_expert"], "reason": "専門家AIの人格や専門性の深化"}
+{"type": "maintenance_rule", "rule": "整合性保持", "description": "combined_knowledge.txt更新時は、このガイドファイルも同期更新"}
+{"type": "maintenance_rule", "rule": "検索性能監視", "description": "検索パターンの有効性を定期的に評価し、必要に応じて調整"}
+{"type": "maintenance_rule", "rule": "ユーザーフィードバック反映", "description": "実際の使用状況に基づいてヒント内容を継続的に改善"} 
