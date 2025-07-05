@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>みんなの成長パートナー「みらいちゃん」マニュアル - PCでのセットアップ</title>
+  <title>伴走型AIコーチ「セミナー講師編」マニュアル - セットアップ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,252 +12,78 @@
   <ul>
     <li><a href="introduction.html">はじめに</a></li>
     <li class="current"><a href="installation.html">セットアップ</a></li>
-    <li><a href="mobile_setup.html">スマホ設定</a></li>
     <li><a href="basic_usage.html">基本的な使い方</a></li>
     <li><a href="advanced_usage.html">応用的な使い方</a></li>
     <li><a href="use_cases.html">活用事例</a></li>
     <li><a href="tips.html">対話のコツ</a></li>
     <li><a href="faq.html">よくある質問</a></li>
   </ul>
-</nav>
+nav>
 
 <header id="title-block-header">
-<h1 class="title">PCでのセットアップ</h1>
+<h1 class="title">💻 セットアップ</h1>
 </header>
 
-<h1 id="pcでのセットアップ">💻 PCでのセットアップ</h1>
-
-<p>パソコンでみらいちゃんを使い始める方法をご案内します。難しい操作は一切ありません！</p>
+<p>AIコーチを使い始めるための設定方法をご案内します。数ステップで完了します。</p>
 
 <div class="highlight-box">
 <p><strong>🔧 必要なもの</strong></p>
 <ul>
-<li>インターネットに接続されたパソコン</li>
-<li>Google Chrome、Microsoft Edge、Safari などのウェブブラウザ</li>
-<li>Googleアカウント（Gmail のアカウント）</li>
+<li>インターネットに接続されたPCまたはスマートフォン</li>
+<li>Google Chrome、SafariなどのモダンなWebブラウザ</li>
+<li>Googleアカウント（Gmailアカウントなど）</li>
 </ul>
 </div>
 
 <h2 id="ステップ1-googleアカウントの準備">📧 ステップ1: Googleアカウントの準備</h2>
+<p>AIコーチはGoogle Geminiというサービス上で動作します。そのため、Googleアカウントが必要です。</p>
+<p>普段お使いのGmailアカウントがあれば、それで問題ありません。お持ちでない場合は、<a href="https://accounts.google.com/" target="_blank">Google アカウント作成ページ</a>から無料で作成してください。</p>
 
-<p>みらいちゃんはGoogle Geminiというサービスを使用します。まずはGoogleアカウントが必要です。</p>
-
-<h3>既にGmailをお使いの場合</h3>
-<p>普段お使いのGmailアカウントでそのまま利用できます。ステップ2に進んでください。</p>
-
-<h3>Googleアカウントをお持ちでない場合</h3>
+<h2 id="ステップ2-google-geminiへのアクセス">🌟 ステップ2: Google Geminiへのアクセス</h2>
 <ol>
-<li><a href="https://accounts.google.com/" target="_blank">Google アカウント作成ページ</a>にアクセス</li>
-<li>「アカウントを作成」をクリック</li>
-<li>必要な情報を入力してアカウントを作成</li>
+<li>ウェブブラウザで <a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a> にアクセスします。</li>
+<li>お持ちのGoogleアカウントでログインします。</li>
+<li>初めて利用する場合は、利用規約が表示されるので同意します。</li>
 </ol>
 
-<div class="screenshot-container">
-<img src="images/google-account-creation.png" alt="Googleアカウント作成画面のスクリーンショット" class="screenshot">
-<p class="screenshot-caption">📸 Googleアカウント作成画面：姓名を入力して「次へ」をクリックします</p>
-</div>
-
-<h2 id="ステップ2-google-geminiにアクセス">🌟 ステップ2: Google Geminiにアクセス</h2>
-
-<ol>
-<li>ウェブブラウザで <a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a> にアクセス</li>
-<li>Googleアカウントでログイン</li>
-<li>利用規約に同意</li>
-</ol>
-
-<h2 id="ステップ3-みらいちゃんの設定">⚙️ ステップ3: みらいちゃんの設定</h2>
-
-<p>Google Geminiにアクセスできたら、みらいちゃんを設定します。ここでは、管理者から受け取ったプロンプトとナレッジファイルを使って、ご自身のGeminiに「みらいちゃん」を手動で設定する方法を説明します。少し手順が多いですが、一つずつ丁寧に行いましょう。</p>
+<h2 id="ステップ3-aiコーチの設定">⚙️ ステップ3: AIコーチの設定 (Gemの作成)</h2>
+<p>Google Geminiの「Gems」という機能を使って、あなた専用のAIコーチを作成します。管理者から提供された設定ファイルを使いますので、少し手順が多いですが、丁寧に行いましょう。</p>
 
 <h3>3.1. 準備するもの</h3>
-<p>まず、以下のファイル一式を準備してください。</p>
+<p>まず、管理者から共有された以下の2つのファイルを準備してください。</p>
 <ul>
-  <li><a href="prompts/gemini_shopsupp/main_prompt.html" target="_blank">メインプロンプト</a>: 別ウィンドウで開きます。中のテキストを全てコピーしてください。</li>
-  <li>以下の2つのナレッジファイルを、お使いのPCにダウンロードします。これらは、みらいちゃんがあなたをサポートするための重要な知識です。
-    <ul>
-      <li><a href="prompts/gemini_shopsupp/attachments/combined_knowledge.txt" download>業務知識ファイル</a></li>
-      <li><a href="prompts/gemini_shopsupp/attachments/knowledge_guide.txt" download>ナレッジガイド</a></li>
-    </ul>
-  </li>
+    <li><strong>プロンプトファイル (main_prompt.md):</strong> AIコーチの振る舞いを定義する指示書です。中身をすべてコピーしておきます。</li>
+    <li><strong>ナレッジファイル (combined_knowledge.txt):</strong> AIコーチの専門知識が詰まった知識ベースです。お使いのPCにダウンロードしておきます。</li>
 </ul>
 
-<h3>3.2. 新しい Gem の作成</h3>
+<h3>3.2. 新しいGemの作成と設定</h3>
 <ol>
-<li>Geminiの画面左側にある「Gems」というメニューをクリックします。</li>
-<li>「Gemを作成」をクリックします。</li>
-</ol>
-<div class="screenshot-container">
-<img src="images/gemini-gem-creation.png" alt="Gemini Gems作成画面のスクリーンショット" class="screenshot">
-<p class="screenshot-caption">📸 Gemini Gems作成画面：「Gemを作成」ボタンをクリックして新しいGemを作成します</p>
-</div>
-
-
-<h3>3.3. プロンプトとナレッジの設定</h3>
-<p>Gem の設定画面が開いたら、以下の手順で設定します。</p>
-
-<h4>① 名前の設定</h4>
-<p>「Gemに名前をつけてください」という欄に、<code>みんなの成長パートナー「みらいちゃん」</code> と入力します。</p>
-
-<h4>② プロンプト（指示）の設定</h4>
-<ol>
-<li>先ほど開いた<a href="../prompts/gemini_shopsupp/main_prompt.html" target="_blank">メインプロンプト</a>のページで、「プロンプトをコピー」ボタンをクリックします。</li>
-<li>Geminiの「指示」と書かれた大きな入力欄に、コピーした内容を貼り付けます (Windowsなら Ctrl+V, Macなら Cmd+V)。</li>
-</ol>
-
-<h4>③ 知識の追加</h4>
-<ol>
-<li>「指示」欄の下にある「知識」のセクションを探します。</li>
-<li><strong>「＋」（ファイルを追加）</strong> をクリックします。</li>
-<li>ファイル選択画面が開いたら、先ほどダウンロードした2つのナレッジファイル（業務知識ファイル, ナレッジガイド）を選択し、順番にアップロードします。</li>
-</ol>
-
-<h3>3.4. 保存と最終確認</h3>
-<ol>
+<li>Geminiの画面左側のメニューから「Gems」をクリックし、「Gemを作成」を選択します。</li>
+<li><strong>名前の設定:</strong> 「Gemに名前をつけてください」という欄に、<strong>伴走型AIコーチ「セミナー講師編」</strong>と入力します。</li>
+<li><strong>プロンプト(指示)の設定:</strong> 「指示」と書かれた大きな入力欄に、準備しておいたプロンプトファイル(main_prompt.md)の中身をすべて貼り付けます。</li>
+<li><strong>知識の追加:</strong> 「知識」セクションの「＋」(ファイルを追加) をクリックし、ダウンロードしておいたナレッジファイル(combined_knowledge.txt)をアップロードします。</li>
 <li>画面右上の<strong>「保存」</strong>または<strong>「更新」</strong>ボタンをクリックして設定を保存します。</li>
-<li><strong>【重要】</strong>保存後、ファイルが正しく登録されているか必ず確認しましょう。
-    <ul>
-    <li>一度前の画面に戻り、作成した「みらいちゃん」の編集メニュー（鉛筆マーク）を開きます。</li>
-    <li>「知識」の欄に、アップロードした2つのファイル名が表示されているかを確認してください。</li>
-    <li>もしファイルが不足している場合は、お手数ですが再度「＋」から追加し、もう一度保存してください。（登録したはずのファイルが、たまに消えてしまうことがあります）</li>
-    </ul>
-</li>
 </ol>
+
+<h3>3.3. 最終確認</h3>
+<p><strong>【重要】</strong>保存後、ファイルが正しく登録されているか再度確認してください。Gemの編集画面を開き、「知識」の欄にアップロードしたファイル名が表示されていることを確認します。(登録したはずのファイルが消えてしまうことがあるため)</p>
 
 <h2 id="ステップ4-動作確認">✅ ステップ4: 動作確認</h2>
-
-<p>みらいちゃんが正しく動作するか確認してみましょう。</p>
-
+<p>AIコーチが正しく設定できたか確認してみましょう。</p>
 <ol>
-<li>チャット欄に「こんにちは」と入力</li>
-<li>みらいちゃんから温かい挨拶が返ってくることを確認</li>
-<li>「メニューを見せてください」と入力</li>
-<li>選択肢が表示されることを確認</li>
+<li>作成したGemとのチャット画面で「こんにちは」と入力します。</li>
+<li>AIコーチからセミナー講師を気遣う温かい挨拶が返ってくれば成功です。</li>
 </ol>
-
-<div class="screen-mockup">
-  <div class="chat-container">
-      <div class="chat-status">
-          ✦ 📊 状態: 意図[初回相談] | モード[発散] | 現在地[ニーズ確認] | ゴール[成長方向性決定]
-      </div>
-      <div class="ai-message">
-          <p class="greeting-main">こんにちは！みんなの成長パートナー「みらいちゃん」です🌟</p>
-          <p>キャリアショップでのお仕事、毎本当にお疲れ様です！✨<br>
-          お客様と向き合うお仕事って、やりがいがある一方で、色々な課題もありますよね。</p>
-          <p>今日は、あなたの「もっとこうなりたい！」を心理学に基づいた専門家チームと一緒に実現していきませんか？🌱</p>
-          
-          <div class="chat-menu">
-              <div class="menu-option">
-                  <p><strong>【1】AI活用の基本を学んで、第一歩を踏み出したい 💡</strong></p>
-                  <p class="menu-description">→ 「AIって何？」から始める安心サポート（基礎学習タイプ）<br>
-                     → 担当：ゆうき（AI活用アドバイザー）🚀</p>
-              </div>
-              <div class="menu-option">
-                  <p><strong>【2】接客・販売業務をもっと効率的にしたい ⚡</strong></p>
-                  <p class="menu-description">→ 具体的な業務改善で即効果を実感（実務改善タイプ）<br>
-                     → 担当：さくらさん（接客マスター）🌟</p>
-              </div>
-              <div class="menu-option">
-                  <p><strong>【3】AIに気軽に相談・質問したい 💬</strong></p>
-                  <p class="menu-description">→ 日々の悩みや疑問を一緒に整理（相談・対話タイプ）<br>
-                     → 担当：みらいちゃん + 状況に応じて専門家</p>
-              </div>
-              <div class="menu-option">
-                  <p><strong>【4】後輩指導・チーム育成を上手にしたい 👥</strong></p>
-                  <p class="menu-description">→ 指導スキルとリーダーシップ向上（指導者タイプ）<br>
-                     → 担当：たけし先生（教育リーダー）🎯</p>
-              </div>
-              <div class="menu-option">
-                  <p><strong>【5】迷ったらここから！やりたいことを一緒に整理 🧭</strong></p>
-                  <p class="menu-description">→ 何から始めればいいかわからない方へ（探索・発見タイプ）<br>
-                     → 担当：みさき（キャリアメンター）📈</p>
-              </div>
-              <div class="menu-option">
-                  <p><strong>【6】プライベートも含めて、なんでも気軽にフリートーク 🗣️</strong></p>
-                  <p class="menu-description">→ 仕事以外の悩みや雑談も大歓迎（リラックス・雑談タイプ）<br>
-                     → 担当：ゆみ先生（ストレスケア）🕊️</p>
-              </div>
-          </div>
-
-          <p>どちらを選んでも大丈夫です！あなたのペースで進めていきましょう。<br>
-          番号を教えてくださいね😊</p>
-
-      </div>
-      <div class="chat-footer">
-          <div class="footer-section special-feature">
-              🎉 <strong>特別機能:</strong> 状況に応じて、法務・マーケティング・心理・ITのゲストエキスパートがサプライズ登場することも！
-          </div>
-          <div class="footer-section trivia">
-              💡 <strong>豆知識:</strong> 信頼関係は4つの要素（共感・能力・誠実・予測可能性）で構築されます [D]詳細
-          </div>
-          <div class="footer-section team-intro">
-              <p><strong>🌟 専門家チーム紹介:</strong></p>
-              <p>🌟さくらさん（接客のプロ） 🎯たけし先生（教育のプロ） 🚀ゆうき（AI活用のプロ） 📈みさき（キャリアのプロ） 🕊️ゆみ先生（心のケアのプロ） + ゲスト：⚖️りえ先生 📊ひろき 🌸ゆみ先生 💻けんた</p>
-          </div>
-          <div class="footer-section shortcuts">
-              <p><strong>🎮 便利機能:</strong> [H]助けてAI [F]ヘルプ [P]進捗 [C]保存</p>
-              <p><strong>専門家直通:</strong> [S1]さくらさん [S2]たけし先生 [S3]ゆうき [S4]みさき [S5]ゆみ先生</p>
-              <p><strong>実践練習:</strong> [L1]スキル練習 [L2]模擬練習 [L3]気軽に相談 [L4]パネルディスカッション</p>
-          </div>
-      </div>
-  </div>
-</div>
-
-<h2 id="便利な使い方のヒント">💡 便利な使い方のヒント</h2>
-
-<div class="feature-grid">
-<div class="feature-card">
-<h3><span class="emoji">📌</span>ブックマークに追加</h3>
-<p>頻繁に使用する場合は、ブラウザのブックマークに追加しておくと便利です。</p>
-</div>
-
-<div class="feature-card">
-<h3><span class="emoji">🖥️</span>デスクトップショートカット</h3>
-<p>Chromeの場合、「その他のツール」→「ショートカットを作成」でデスクトップにアイコンを作成できます。</p>
-</div>
-
-<div class="feature-card">
-<h3><span class="emoji">🔄</span>複数タブでの利用</h3>
-<p>複数の相談を同時に進めたい場合は、新しいタブでGeminiを開いて利用できます。</p>
-</div>
-
-<div class="feature-card">
-<h3><span class="emoji">💾</span>会話の保存</h3>
-<p>重要な会話は、ブラウザの印刷機能でPDFとして保存できます。</p>
-</div>
-</div>
-
-<h2 id="トラブルシューティング">🔧 トラブルシューティング</h2>
-
-<h3>ログインできない場合</h3>
-<ul>
-<li>Googleアカウントのパスワードを確認</li>
-<li>ブラウザのキャッシュをクリア</li>
-<li>別のブラウザで試してみる</li>
-</ul>
-
-<h3>みらいちゃんが正しく動作しない場合</h3>
-<ul>
-<li>ページを更新（F5キーまたは再読み込みボタン）</li>
-<li>プロンプトの設定を再確認</li>
-<li>新しいチャットを開始</li>
-</ul>
-
-<h3>動作が重い場合</h3>
-<ul>
-<li>他のタブやアプリケーションを閉じる</li>
-<li>インターネット接続を確認</li>
-<li>時間を置いてから再度アクセス</li>
-</ul>
 
 <div class="highlight-box">
 <p><strong>🎉 セットアップ完了！</strong></p>
-<p>お疲れさまでした！これでパソコンでみらいちゃんを使用する準備が整いました。<br>
+<p>お疲れさまでした！これでAIコーチといつでも対話できる準備が整いました。<br>
 次は<a href="basic_usage.html">基本的な使い方</a>を確認して、実際に使ってみましょう。</p>
 </div>
 
 <nav class="page-nav">
   <a href="introduction.html">&larr; 前へ: はじめに</a>
-  <a href="mobile_setup.html">次へ: スマホでのセットアップ &rarr;</a>
+  <a href="basic_usage.html">次へ: 基本的な使い方 &rarr;</a>
 </nav>
 </body>
-</html> 
+</html>
